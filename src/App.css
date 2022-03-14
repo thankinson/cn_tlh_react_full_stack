@@ -1,9 +1,13 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
 .App {
-  border: solid 1px green;
+  /* border: solid 1px green; */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -13,10 +17,12 @@
 
 
 body{
-  background: url(/src/non_upload_images/instagram_login.jpg);
+  /* background: url(/src/non_upload_images/instagram_login.jpg); */
+  background-color: rgb(31, 31, 31);
   background-repeat: no-repeat;
   background-size: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 

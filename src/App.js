@@ -10,12 +10,8 @@ const App = () => {
         <div className="App">
           {/* ######################### */}
 
-        <Login />
-          {/* {user &&<h1>{user.username}</h1>}
-          {user ? <h1>{user.email}</h1> : <h1>please type something</h1>}
-          {!user ? <Login setUser={setUser}/> : <Home /> } */}
-          {/* <h2>{userName}</h2> */}
-                  
+          {!user ? <Login setUser={setUser}/> : <Home /> }
+
           {/* ######################### */}        
         </div>
   );
