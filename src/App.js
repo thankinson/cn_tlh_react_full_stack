@@ -1,41 +1,25 @@
 import { useState } from 'react';
 import { Login } from './components/login/login';
+import { Home } from './components/home/home';
 import './App.css';
 
 const App = () => {
   const [user, setUser] = useState();
-  const [userName, setUserName] = useState();
-  const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
-  const [bool, setBool] = useState();
 
-  const submitHnadler = (e) => {
-    // e is shorthand for event
-    e.preventDefault();
-    setUser({username: userName, email: email, pass: pass});
-  }
   return (
         <div className="App">
           {/* ######################### */}
 
-          {user &&<h1>{user.username}</h1>}
-          {user ? <h1>{user.username}</h1> : <h1>please type something</h1>}
-           <h2>{userName}</h2>
-          
-          <Login  
-              setHandler={submitHnadler} 
-              setUser={setUserName} 
-              setEmail={setEmail} 
-              setPass={setPass} 
-              setBool={setBool}
-              bool={bool}
-          />
-            
-          
-          {/* ######################### */}
+        <Login />
+          {/* {user &&<h1>{user.username}</h1>}
+          {user ? <h1>{user.email}</h1> : <h1>please type something</h1>}
+          {!user ? <Login setUser={setUser}/> : <Home /> } */}
+          {/* <h2>{userName}</h2> */}
+                  
+          {/* ######################### */}        
         </div>
   );
-}
+};
 
 export default App;
 

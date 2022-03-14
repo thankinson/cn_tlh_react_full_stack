@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .env
+/src/non_upload_images
 
 # testing
 /coverage

@@ -1,3 +1,22 @@
 .App {
   text-align: center;
 }
+
+.App {
+  border: solid 1px green;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body{
+  background: url(/src/non_upload_images/instagram_login.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  height: 100vh;
+}
+
+
