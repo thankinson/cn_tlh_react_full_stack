@@ -1,17 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Login } from './components/login/login';
 import { Home } from './components/home/home';
 import { Header } from './header/header';
 import { Footer } from './components/footer/footer';
+import { tokenLogin } from './utils';
 import './App.css';
+
 
 const App = () => {
   const [user, setUser] = useState();
 
+
+  useEffect(() => {
+    if (localStorage.key("myToken")) {
+      tokenLogin(setUser);
+    }
+  }, []);
+
   return (
         <div className="App">
           {/* ######################### */}
-          <Header />
+          <Header setUser={user}/>
           <div className="content-div">
             {!user ? <Login setUser={setUser}/> : <Home /> }
           </div>
@@ -33,7 +42,6 @@ export default App;
 //   }
 //   return [state, setState]
 // }
-
 
 // {/* <form onSubmit={(event) => {event.preventDefault(); setUser(userName);}} */}
 

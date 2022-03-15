@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PhotoContainer } from "../photoContainer/photo";
+import "./home.css"
 
 export const Home = () => {
     const [photos, setPhotos] = useState([]);
@@ -17,8 +18,10 @@ export const Home = () => {
 
     return (
         <>
-            <button onClick={fetchPhotos}>Get Photos</button>
-            {photos.map((item, index) => <PhotoContainer photo={item} key={index} />)}
+            <div className="home-content">
+                <div><button onClick={fetchPhotos}>Get Photos</button></div>
+                {photos.map((item, index) => <PhotoContainer photo={item} key={index} />)}
+            </div>
         </>
     )
-}
+};
