@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Login } from './components/login/login';
 import { Home } from './components/home/home';
 import { Header } from './header/header';
+import { Footer } from './components/footer/footer';
 import './App.css';
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
             {!user ? <Login setUser={setUser}/> : <Home /> }
           </div>
           
-
+          <Footer />
           {/* ######################### */}        
         </div>
   );

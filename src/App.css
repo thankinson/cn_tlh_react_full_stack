@@ -20,6 +20,7 @@
 
 body{
   /* background: url(/src/non_upload_images/instagram_login.jpg); */
+  margin: 0;
   background-color: rgb(31, 31, 31);
   background-repeat: no-repeat;
   background-size: 100vw;
