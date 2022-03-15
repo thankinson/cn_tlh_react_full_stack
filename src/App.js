@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Login } from './components/login/login';
 import { Home } from './components/home/home';
+import { Header } from './header/header';
 import './App.css';
 
 const App = () => {
@@ -9,8 +10,11 @@ const App = () => {
   return (
         <div className="App">
           {/* ######################### */}
-
-          {!user ? <Login setUser={setUser}/> : <Home /> }
+          <Header />
+          <div className="content-div">
+            {!user ? <Login setUser={setUser}/> : <Home /> }
+          </div>
+          
 
           {/* ######################### */}        
         </div>

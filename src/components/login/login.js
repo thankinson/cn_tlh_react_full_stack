@@ -32,7 +32,6 @@ export const Login = ({setUser}) => {
                     <button className="inputCreds" type="submit" onClick={() => setBool(!bool)}>Submit</button>
                 </div>
                     <div className="space"></div>
-
                 <div className="signUp">
                     <h4>Sign Up</h4>
                 </div>
