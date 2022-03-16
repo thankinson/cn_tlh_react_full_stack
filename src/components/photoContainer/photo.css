@@ -1,3 +1,40 @@
 img{
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 10px;
+    border: solid 2px rgb(173, 173, 173);
+}
+
+.photo-container{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-card{
+    width: 280px;
+    height: 280px;
+    border:  1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+.border{
+    background-color: rgb(51, 49, 47);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.img-pos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80%;
 }

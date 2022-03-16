@@ -1,8 +1,25 @@
 .header-div{
-    background-color: rgb(20, 20, 20);
+    /* border: 1px solid greenyellow; */
+    background-color: rgb(15, 16, 17);
     width: 100vw;
     height: 5vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    border-bottom: solid 1px gray;
+}
+
+.header-space{
+    width: 2vw;
+}
+
+.butStyle {
+    width: 5vw;
+    height: 3vh;
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+    color: aliceblue;
 }

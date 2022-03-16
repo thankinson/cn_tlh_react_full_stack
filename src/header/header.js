@@ -1,12 +1,18 @@
-import "./header.css"
+import { gTfO } from "../utils";
 
-export const Header = () =>{
+import "./header.css";
+
+export const Header = ({setUser}) =>{
     return (
         <>
             <div className="header-div">
-                    <h2>hello test</h2>
+                <div>{setUser && <h4>loged in as: {setUser}</h4>}</div>
+                <div className="header-space"></div>
+                <div><button className="butStyle" onClick={gTfO}>Log Out</button></div>
+                <div className="header-space"></div>
             </div>
-
+            
         </>
     )
 }
+
