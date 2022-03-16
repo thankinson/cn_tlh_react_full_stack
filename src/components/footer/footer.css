@@ -1,8 +1,12 @@
 .footer-div{
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(15, 16, 17);
+    border-top: solid 1px gray;
     width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
 }
+

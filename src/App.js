@@ -6,10 +6,8 @@ import { Footer } from './components/footer/footer';
 import { tokenLogin } from './utils';
 import './App.css';
 
-
 const App = () => {
   const [user, setUser] = useState();
-
 
   useEffect(() => {
     if (localStorage.key("myToken")) {
