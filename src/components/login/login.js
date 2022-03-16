@@ -2,7 +2,6 @@ import { useState } from "react";
 import { createUser, login } from "../../utils";
 import "./login.css";
 
-
 export const Login = ({setUser}) => {
     const [userName, setUserName] = useState();
     const [email, setEmail] = useState();
@@ -28,7 +27,6 @@ e.preventDefault();
             <div className="loginContainer">
                 <div className="loginDiv">
                     <h1>InstaCrap</h1>
-                    
                     <input className="inputCreds " onChange={(event) => setUserName(event.target.value)} placeholder="username" />
                     {!bool && <input className="inputCreds " onChange={(event) => setEmail(event.target.value)} placeholder="email" type="emails" />}
                     <input className="inputCreds" onChange={(event) => setPass(event.target.value)} placeholder="password" type="password" />
@@ -43,7 +41,6 @@ e.preventDefault();
                     {bool && <button className="inputCreds" type="submit" onClick={() => setBool(!bool)}>Sign Up</button>}
                 
                 </div>
-    
             </div>
             </form>
        

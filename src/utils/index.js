@@ -47,8 +47,38 @@ export const tokenLogin = async (setter) => {
     }
 };
 
-export const gTfO = () => {
-    localStorage.clear();
-    window.location.reload(false);
-  
+export const exterminateUser = async (user) => {
+    try {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user/username/${user}`, {
+            method: "DELETE",
+            headers: {"Authorization": `Bearer ${localStorage.getItem("myToken")}`}, });
+            localStorage.clear();
+            window.location.reload(false);
+         await response.json();
+    } catch (error) {
+        console.log(error);
+    }
 };
+
+export const gTfO = () => {
+    try {
+        localStorage.clear();
+        window.location.reload(false);
+    } catch (error) {
+        console.log(error)
+    }
+
+};
+
+export const updatePass = async (user, passUpdate) => {
+    try {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
+            method: "PATCH",
+            username: user,
+            password: passUpdate,
+        });
+        await response.JSON()
+    } catch (error) {
+        console.log()
+    }
+}
