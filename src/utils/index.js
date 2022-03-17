@@ -47,7 +47,7 @@ export const tokenLogin = async (setter) => {
     }
 };
 
-export const deleteteUser = async (user) => {
+export const deleteUser = async (user) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user/username/${user}`, {
             method: "DELETE",
