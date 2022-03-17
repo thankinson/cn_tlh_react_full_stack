@@ -76,13 +76,10 @@ export const updatePass = async (updateObj) => {
             method: "PATCH",
             headers: {"Authorization": `Bearer ${localStorage.getItem("myToken")}`,
         },
-        body: JSON.stringify({
-            password: updateObj,
-        })
-    });
-            
-            
-
+            body: JSON.stringify({
+                password: updateObj,
+                })
+            });
         await response.JSON()
     } catch (error) {
         console.log()
