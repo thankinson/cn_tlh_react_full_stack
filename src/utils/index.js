@@ -70,7 +70,7 @@ export const gTfO = () => {
 
 };
 
-export const updatePass = async (username, passUpdate) => {
+export const updatePass = async (user, passUpdate) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: "PATCH",
@@ -79,6 +79,7 @@ export const updatePass = async (username, passUpdate) => {
                 "Authorization": `Bearer ${localStorage.getItem("myToken")}`,
         },
             body: JSON.stringify({
+                username: user,
                password: passUpdate
                 })
             });

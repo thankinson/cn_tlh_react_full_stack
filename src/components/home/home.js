@@ -3,7 +3,7 @@ import { deleteUser, updatePass } from "../../utils";
 import { PhotoContainer } from "../photoContainer/photo";
 import "./home.css";
 
-export const Home = (user) => {
+export const Home = ({user}) => {
     const [photos, setPhotos] = useState([]);
     const [pho, setPho] = useState(false);
     const [passUpdate, setPass] = useState();
@@ -23,8 +23,7 @@ export const Home = (user) => {
 
     const submitHandler = (e) =>{
         e.preventDefault();
-        
-        updatePass(passUpdate)
+        updatePass(user, passUpdate)
         
     
     };
@@ -37,7 +36,7 @@ export const Home = (user) => {
                     {!pho && <div><button className="button" type="submit"  onClick={deleteUser}>Delete User</button></div>}
                     {!pho && <div>
                         <form onClick={submitHandler}>
-                            <div> <input type="text" className="button"  placeholder="Enter New Password"  onChange={(event) => setPass(event.target.value)}/> </div>
+                            <div> <input type="password"  className="button"  placeholder="Enter New Password"  onSubmit={(event) => setPass(event.target.value)}/> </div>
                             <div className="spacer"></div>
                             <div><button className="button" type="submit" >Update Password</button></div>
                                 </form>
