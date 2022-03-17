@@ -50,9 +50,3 @@ e.preventDefault();
 
 
 
-// {/* <form onSubmit={submitHnadler}>
-// {!bool && <input onChange={(event) => setUserName(event.target.value)} placeholder="username" />}
-// <input onChange={(event) => setEmail(event.target.value)} placeholder="email" type="emails" />
-// <input onChange={(event) => setPass(event.target.value)} placeholder="password" type="password" />
-// <button type="submit" onClick={() => setBool(!bool)}>Submit</button>
-// </form> */}
