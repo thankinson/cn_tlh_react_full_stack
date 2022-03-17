@@ -47,7 +47,7 @@ export const tokenLogin = async (setter) => {
     }
 };
 
-export const exterminateUser = async (user) => {
+export const deleteteUser = async (user) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user/username/${user}`, {
             method: "DELETE",
@@ -74,6 +74,7 @@ export const updatePass = async (user, passUpdate) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: "PATCH",
+            headers: {"Content-Type": "application/json"},
             username: user,
             password: passUpdate,
         });

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { exterminateUser, updatePass } from "../../utils";
+import { deleteUser, updatePass } from "../../utils";
 import { PhotoContainer } from "../photoContainer/photo";
 import "./home.css"
 
@@ -28,7 +28,7 @@ export const Home = (user) => {
         <>
             <div className="home-content">
                 {!pho && <div><button className="button" onClick={fetchPhotos}>Get Photos</button></div>}
-                {!pho && <div><button className="button" onClick={exterminateUser}>Delete User</button></div>}
+                {!pho && <div><button className="button" onClick={deleteUser}>Delete User</button></div>}
                 {!pho && <div>
                             <form onClick={submitHandler}>
                             <input type="text" placeholder="Enter New Password"  onChange={(event) => setPass(event.target.value)}/>
