@@ -35,8 +35,8 @@ export const Home = ({user}) => {
                     {!pho && <div><button className="button" type="submit"  onClick={fetchPhotos}>Get Photos</button></div>}
                     {!pho && <div><button className="button" type="submit"  onClick={deleteUser}>Delete User</button></div>}
                     {!pho && <div>
-                        <form onClick={submitHandler}>
-                            <div> <input type="password"  className="button"  placeholder="Enter New Password"  onSubmit={(event) => setPass(event.target.value)}/> </div>
+                        <form onSubmit={submitHandler}>
+                            <div> <input type="password"  className="button"  placeholder="Enter New Password"  onChange={(event) => setPass(event.target.value)}/> </div>
                             <div className="spacer"></div>
                             <div><button className="button" type="submit" >Update Password</button></div>
                                 </form>
