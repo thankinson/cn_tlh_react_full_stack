@@ -70,14 +70,19 @@ export const gTfO = () => {
 
 };
 
-export const updatePass = async (user, passUpdate) => {
+export const updatePass = async (updateObj) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: "PATCH",
-            headers: {"Content-Type": "application/json"},
-            username: user,
-            password: passUpdate,
-        });
+            headers: {"Authorization": `Bearer ${localStorage.getItem("myToken")}`,
+        },
+        body: JSON.stringify({
+            password: updateObj,
+        })
+    });
+            
+            
+
         await response.JSON()
     } catch (error) {
         console.log()
