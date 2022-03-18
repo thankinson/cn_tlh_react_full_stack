@@ -20,7 +20,7 @@ const App = () => {
           {/* ######################### */}
           <Header setUser={user}/>
           <div className="content-div">
-            {!user ? <Login setUser={setUser}/> : <Home /> }
+            {!user ? <Login setUser={setUser}/> : <Home user={user}/> }
           </div>
           
           <Footer />
